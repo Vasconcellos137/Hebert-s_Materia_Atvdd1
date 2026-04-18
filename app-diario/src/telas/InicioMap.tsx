@@ -26,7 +26,7 @@ export default function InicioMap() {
 
       <Text style={estilos.secao}>Matérias cadastradas</Text>
 
-      
+
       {materias.map((itemMateria) => (
         <CartaoMateria
           key={itemMateria.nome}
@@ -34,6 +34,9 @@ export default function InicioMap() {
           descricao={itemMateria.descricao}
           corDestaque={itemMateria.corDestaque}
         />
+
+        {materias ?  : <Text>Nenhuma matéria cadastrada.</Text>}
+
       ))}
     </ScrollView>
   );
